@@ -135,4 +135,3 @@ slurm_out/
 /openxbow
 /metrics.json
 /audeep_workspace
-src/remove_test_labels.py
