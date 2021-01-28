@@ -10,7 +10,7 @@ The Escalation Sub-Challenge (ESS) is a task on classifcation of level of
 
 
 ```diff
-agression
+- agression
 
 ```
 in vocalisations.
@@ -19,15 +19,34 @@ The Sub-Challenge baseline measure is Unweighted Average Recall (UAR).
 
 This Sub-Challenge is based on a corpus collected by Delft University, The Netherlands.
 
-The task is a <span style="color:red">3-class</span> classifciation, and the classes for the data are either <span style="color:red">'Low', 'Medium' or 'High'</span>. Apart from the standard ComParE baseline toolkits (openSMILE, Bag-of-Audio-Words), we additionally provide a Deep End-to-End approach (end2you).
+The task is a 
+
+```diff
+- 3-class
+```
+classifciation, and the classes for the data are either 
+
+
+```diff
+- 'L', 'M' or 'H'
+
+```
+
+Apart from the standard ComParE baseline toolkits (openSMILE, Bag-of-Audio-Words), we additionally provide a Deep End-to-End approach (end2you).
 
 Submission
 The participants are required to provide one prediction for each instance, in the test set. You should submit a prediction file, in the following format:
 
-filename,prediction
+
+
+```diff
+- filename,prediction
 test_00.wav,L
 test_01.wav,L
 [...]
+
+```
+
 PLEASE NOTE THAT THE SUBMISSION FORMAT HAS CHANGED, COMPARED TO THE 2009-2018 CHALLENGES OF THE COMPARE SERIES.
 
 Each registered team has up to five (5) submissions for this Sub-Challenge.
