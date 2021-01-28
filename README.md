@@ -1,4 +1,39 @@
-# Baseline scripts for ComParE2021
+# Baseline scrip# Baseline scripts for ComParE2021 Primates Sub-Challenge 
+
+
+The Primates Sub-Challenge (PRS) is a task on classifcation Primate vocalisations.
+
+The Sub-Challenge baseline measure is Unweighted Average Recall (UAR). 
+
+This Sub-Challenge is based on a corpus collected by Utrecht University, The Netherlands.
+
+The task is a 5-class classifciation, and the classes for the audio data are either 'background','chimpanze', 'mandrille','geunon', and 'redcap'. Apart from the standard ComParE baseline toolkits (openSMILE, Bag-of-Audio-Words), we additionally provide a Deep End-to-End approach (end2you).
+
+## Submission 
+The participants are required to provide one prediction for audio instance, in the test set. 
+You should submit a prediction file, in the following format:
+
+```
+filename,prediction
+test_00.wav,chimpanze
+test_01.wav,geunon
+[...]
+```
+
+PLEASE NOTE THAT THE SUBMISSION FORMAT HAS CHANGED, COMPARED TO THE 2009-2018 CHALLENGES OF THE COMPARE SERIES.
+
+Each registered team has up to five (5) submissions for this Sub-Challenge.
+
+To submit your csv files, login on the website: http://www5.cs.fau.de/compare/
+with the credentials you received from the organisers.
+
+More information on the challenge: >http://www.compare.openaudio.eu/compare2021/
+
+Please note that each team needs to submit at least one regular paper to the ComParE 2021 Special Session at
+Interspeech 2021.
+
+This paper may include your methods and results for several Sub-Challenges.
+ts for ComParE2021
 
 ## Installation
 ### Linux
