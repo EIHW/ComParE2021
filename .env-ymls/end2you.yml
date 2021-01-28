@@ -1,4 +1,4 @@
-name: /nas/staff/data_work/Maurice/repositories/ComParE2021/.envs/end2you
+name: ./.envs/end2you
 channels:
   - defaults
   - pytorch
@@ -200,4 +200,4 @@ dependencies:
     - imageio-ffmpeg==0.4.3
     - moviepy==1.0.3
     - proglog==0.1.9
-prefix: /nas/staff/data_work/Maurice/repositories/ComParE2021/.envs/end2you
+prefix: ./.envs/end2you

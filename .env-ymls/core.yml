@@ -1,4 +1,4 @@
-name: /nas/staff/data_work/Maurice/repositories/ComParE2021/.envs/core
+name: ./.envs/core
 channels:
   - defaults
   - pytorch
@@ -235,4 +235,4 @@ dependencies:
     - werkzeug==1.0.1
     - wrapt==1.12.1
     - xarray==0.10.0
-prefix: /nas/staff/data_work/Maurice/repositories/ComParE2021/.envs/core
+prefix: ./.envs/core
