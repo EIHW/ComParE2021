@@ -1,4 +1,4 @@
-name: /nas/staff/data_work/Maurice/repositories/ComParE2021/.envs/end2you
+name: ./.envs/end2you
 channels:
   - defaults
   - pytorch
@@ -193,11 +193,11 @@ dependencies:
   - zlib=1.2.11=h7b6447c_3
   - zstd=1.4.5=h9ceee32_0
   - pip:
-    - end2you==1.0
+    - git+https://github.com/end2you/end2you.git
     - facenet-pytorch==2.5.1
     - h5py==3.1.0
     - imageio==2.9.0
     - imageio-ffmpeg==0.4.3
     - moviepy==1.0.3
     - proglog==0.1.9
-prefix: /nas/staff/data_work/Maurice/repositories/ComParE2021/.envs/end2you
+prefix: ./.envs/end2you
