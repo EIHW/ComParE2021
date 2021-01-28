@@ -1,6 +1,38 @@
-# Baseline scripts for ComParE2021
+# Baseline scripts for ComParE2021 Escalation Sub-Challenge
 
-## Installation
+
+<span style="color:red">Info in red to be confirmed</span>
+
+The Escalation Sub-Challenge (ESS) is a task on classifcation of level of <span style="color:red">agression</span> in vocalisations.
+
+The Sub-Challenge baseline measure is Unweighted Average Recall (UAR).
+
+This Sub-Challenge is based on a corpus collected by Delft University, The Netherlands.
+
+The task is a <span style="color:red">3-class</span> classifciation, and the classes for the data are either <span style="color:red">'Low', 'Medium' or 'High'</span>. Apart from the standard ComParE baseline toolkits (openSMILE, Bag-of-Audio-Words), we additionally provide a Deep End-to-End approach (end2you).
+
+Submission
+The participants are required to provide one prediction for each instance, in the test set. You should submit a prediction file, in the following format:
+
+filename,prediction
+test_00.wav,L
+test_01.wav,L
+[...]
+PLEASE NOTE THAT THE SUBMISSION FORMAT HAS CHANGED, COMPARED TO THE 2009-2018 CHALLENGES OF THE COMPARE SERIES.
+
+Each registered team has up to five (5) submissions for this Sub-Challenge.
+
+To submit your csv files, login on the website: http://www5.cs.fau.de/compare/ with the credentials you received from the organisers.
+
+More information on the challenge: >http://www.compare.openaudio.eu/compare2021/
+
+Please note that each team needs to submit at least one regular paper to the ComParE 2021 Special Session at Interspeech 2021.
+
+This paper may include your methods and results for several Sub-Challenges. ts for ComParE2021
+
+
+
+## General Installation
 ### Linux
 If you have conda installed (either miniconda or anaconda), you can execute `./install` to setup the two virtual environments needed for executing the experiments. You can activate the `core` or `end2you` environments with `source ./activate core` or `source ./activate end2you` respectively. 
 
