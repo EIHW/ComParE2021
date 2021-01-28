@@ -4,6 +4,14 @@
 ### Linux
 If you have conda installed (either miniconda or anaconda), you can execute `./install` to setup the two virtual environments needed for executing the experiments. You can activate the `core` or `end2you` environments with `source ./activate core` or `source ./activate end2you` respectively. 
 
+### Installing openSMILE
+openSMILE is needed for the extraction of LLDs and audio functionals. For Linux users, we provide a script (`scripts/download_opensmile.sh`) which downloads the latest binary release and puts it in the location expected by extraction codes. If you are on another platform, download and unpack the correct [binary release](https://github.com/audeering/opensmile/releases/tag/v3.0.0) to `opensmile` at the root of this repository. The layout should then look like this:
+```
+opensmile/
+  |-- bin/
+  |-- config/
+  |-- ...
+```
 ## Data
 Make sure, you are on the correct branch regarding your chosen sub-challenge. Otherwise (with one of the virtual environments activated), checkout the desired branch. Move or copy the data from the challenge package into the project's root directory, such that the `dist` folder lies on the same level as `scripts/` and `src`. The layout should look like this:
 ```
