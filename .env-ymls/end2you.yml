@@ -193,7 +193,7 @@ dependencies:
   - zlib=1.2.11=h7b6447c_3
   - zstd=1.4.5=h9ceee32_0
   - pip:
-    - end2you==1.0
+    - git+https://github.com/end2you/end2you.git
     - facenet-pytorch==2.5.1
     - h5py==3.1.0
     - imageio==2.9.0
