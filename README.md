@@ -35,7 +35,7 @@ Interspeech 2021.
 This paper may include your methods and results for several Sub-Challenges.
 ts for ComParE2021
 
-## Installation
+## General Installation
 ### Linux
 If you have conda installed (either miniconda or anaconda), you can execute `./install` to setup the two virtual environments needed for executing the experiments. You can activate the `core` or `end2you` environments with `source ./activate core` or `source ./activate end2you` respectively. 
 
