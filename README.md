@@ -1,5 +1,13 @@
 # Baseline scripts for ComParE2021
 
+Information on each sub-challenge is given in the respective branch. 
+```
+CCS - Covid Coughing Sub-challenge
+CSS - Covid Speech Sub-challenge
+PRS - Primates Sub-challenge
+ESS - Escalation Sub-challenge 
+```
+
 ## Installation
 ### Linux
 If you have conda installed (either miniconda or anaconda), you can execute `./install` to setup the two virtual environments needed for executing the experiments. You can activate the `core` or `end2you` environments with `source ./activate core` or `source ./activate end2you` respectively. 
