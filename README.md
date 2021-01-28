@@ -7,7 +7,7 @@ The Sub-Challenge baseline measure is Unweighted Average Recall (UAR).
 
 This Sub-Challenge is based on a corpus collected by Utrecht University, The Netherlands.
 
-The task is a 5-class classifciation, and the classes for the audio data are either 'background','chimpanze', 'mandrille','geunon', and 'redcap'. Apart from the standard ComParE baseline toolkits (openSMILE, Bag-of-Audio-Words), we additionally provide a Deep End-to-End approach (end2you).
+The task is a 5-class classifciation, and the classes for the audio data are either 'background', 'chimpanze', 'mandrille', 'geunon', or 'redcap'. Apart from the standard ComParE baseline toolkits (openSMILE, Bag-of-Audio-Words), we additionally provide a Deep End-to-End approach (end2you).
 
 ## Submission 
 The participants are required to provide one prediction for audio instance, in the test set. 
