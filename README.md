@@ -6,7 +6,14 @@
 
 ```
 
-The Escalation Sub-Challenge (ESS) is a task on classifcation of level of <span style="color:red">agression</span> in vocalisations.
+The Escalation Sub-Challenge (ESS) is a task on classifcation of level of 
+
+
+```diff
+agression
+
+```
+in vocalisations.
 
 The Sub-Challenge baseline measure is Unweighted Average Recall (UAR).
 
