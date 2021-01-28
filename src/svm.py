@@ -170,7 +170,7 @@ if __name__=='__main__':
 
     feature_type = sys.argv[1]
     feature_base = f'{FEATURE_PATH}/{feature_type}'
-    result_base = f'{FEATURE_PATH}/{feature_type}'
+    result_base = f'./results/{feature_type}'
     for dirpath, dirnames, filenames in os.walk(feature_base):
         if not dirnames:
             file_extension = os.path.splitext(filenames[0])[1]
