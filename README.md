@@ -14,8 +14,11 @@ The participants are required to provide one prediction for audio instance, in t
 You should submit a prediction file, in the following format:
  
 filename,prediction
+
 test_00.wav,positive
+
 test_01.wav,negative
+
 [...]
 
 PLEASE NOTE THAT THE SUBMISSION FORMAT HAS CHANGED, COMPARED TO THE 2009-2018 CHALLENGES OF THE COMPARE SERIES.
