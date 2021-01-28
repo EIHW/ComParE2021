@@ -1,4 +1,4 @@
-# Baseline scrip# Baseline scripts for ComParE2021 Primates Sub-Challenge 
+# Baseline scripts for ComParE2021 Primates Sub-Challenge 
 
 
 The Primates Sub-Challenge (PRS) is a task on classifcation Primate vocalisations.
