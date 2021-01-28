@@ -1,12 +1,12 @@
 # Baseline scripts for ComParE2021
 
 Information on each sub-challenge is given in the respective branch. 
-```
-CCS - Covid Coughing Sub-challenge
-CSS - Covid Speech Sub-challenge
-PRS - Primates Sub-challenge
-ESS - Escalation Sub-challenge 
-```
+
+- CCS - Covid Coughing Sub-challenge
+- CSS - Covid Speech Sub-challenge
+- PRS - Primates Sub-challenge
+- ESS - Escalation Sub-challenge 
+
 
 ## General Installation
 ### Linux
