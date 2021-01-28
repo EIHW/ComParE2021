@@ -1,7 +1,10 @@
 # Baseline scripts for ComParE2021 Escalation Sub-Challenge
 
 
-<span style="color:red">Info in red to be confirmed</span>
+```diff
+- Info in red to be confirmed
+
+```
 
 The Escalation Sub-Challenge (ESS) is a task on classifcation of level of <span style="color:red">agression</span> in vocalisations.
 
