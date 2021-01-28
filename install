@@ -1,0 +1,25 @@
+#!/bin/sh
+
+eval "$(conda shell.$(basename $SHELL) hook)"
+option="$1"
+if [ -z "$option" ]; then
+    for yml in .env-ymls/*.yml; do
+        if [ -d ".envs/$(basename ${yml%.yml})" ]; then
+            conda env update --prefix=.envs/$(basename ${yml%.yml}) -f $yml --prune
+        else
+            conda env create --prefix=.envs/$(basename ${yml%.yml}) -f $yml
+        fi
+    done;
+    source ./activate core
+else
+    conda env create --prefix=.envs/$1 -f .env-ymls/$1.yml
+    source ./activate $1
+fi
+
+
+# initialize dvc
+dvc init
+
+# install dvc hooks in repository
+dvc install
+

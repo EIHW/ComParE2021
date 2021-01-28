@@ -1,0 +1,7 @@
+stages:
+  download_openXBOW:
+    cmd: mkdir -p openxbow; wget -O openxbow/openXBOW.jar https://raw.githubusercontent.com/openXBOW/openXBOW/master/openXBOW.jar
+    deps:
+    - https://raw.githubusercontent.com/openXBOW/openXBOW/master/openXBOW.jar
+    outs:
+    - openxbow

@@ -1,0 +1,9 @@
+
+eval "$(conda shell.$(basename $SHELL) hook)"
+
+
+if [ -d ".envs/$1" ]; then
+    conda activate .envs/$1
+else
+    echo "Environment .envs/$1 does not exist. Try running './install' or creating it with './create-env $1'."
+fi

@@ -1,0 +1,46 @@
+# Parameters for the experiment should be defined here and the contents read by the respective scripts.
+deepspectrum:
+  extractionNetwork:
+    - densenet121
+  plotMode:
+    - mel
+  melBands: 
+    - 128
+  colourMap:
+    - viridis 
+  window_size:
+  hop_size:
+
+opensmile:
+  featureSets:
+    - compare16/ComParE_2016.conf 
+    # - egemaps/v01b/eGeMAPSv01b.conf
+    # - is09-13/IS09_emotion.conf
+    # - is09-13/IS10_paraling.conf
+    # - is09-13/IS11_speaker_state.conf
+    # - is09-13/IS12_speaker_trait.conf
+XBOW:
+  csize:
+    - 125
+    - 250
+    - 500
+    - 1000
+    - 2000
+  num_assignments:
+    - 10
+    - 20
+    - 50
+lazyml:
+  grid: default
+  metric: UAR
+  crossvalidation: false
+svm:
+  ci_interval: 0.95
+  bootstrap_iterations: 100
+fusion:
+  to_fuse:
+    - auDeep
+    - deepspectrum
+    - opensmile
+    - openXBoW
+    - end2you
