@@ -96,6 +96,7 @@ stages:
     - results/openXBoW
     - results/opensmile
     - results/end2you
+    - results/DiFE
     - src/late_fusion.py
     params:
     - fusion
@@ -135,3 +136,28 @@ stages:
     - src/export_end2you_results.py
     outs:
     - results/end2you
+  DiFE:
+    cmd: source ./activate DiFE; ./scripts/DiFE.sh
+    deps:
+    - DiFE/configs.py
+    - DiFE/data_features.py
+    - DiFE/main.py
+    - DiFE/models.py
+    - DiFE/train.py
+    - DiFE/utils.py
+    - dist/lab
+    - dist/text
+    - scripts/DiFE.sh
+    outs:
+    - DiFE/experiments
+    - DiFE/runs
+    - features/DiFE
+  svm_DiFE:
+    cmd: source ./activate core; python -m src.svm DiFE
+    deps:
+    - features/DiFE
+    - src/svm.py
+    params:
+    - svm
+    outs:
+    - results/DiFE

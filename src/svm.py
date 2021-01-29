@@ -172,8 +172,9 @@ if __name__=='__main__':
     feature_base = f'{FEATURE_BASE}/{feature_type}'
     result_base = f'./results/{feature_type}'
     for dirpath, dirnames, filenames in os.walk(feature_base):
-        if not dirnames:
+        if not dirnames or 'train.csv' in filenames:
             file_extension = os.path.splitext(filenames[0])[1]
-            result_dir = os.path.join(result_base, os.path.relpath(dirpath, start=feature_base))
-            os.makedirs(result_dir, exist_ok=True)
-            run_svm(dirpath, result_dir, params)
+            if any(filename.startswith('train.') for filename in filenames):
+                result_dir = os.path.join(result_base, os.path.relpath(dirpath, start=feature_base))
+                os.makedirs(result_dir, exist_ok=True)
+                run_svm(dirpath, result_dir, params)

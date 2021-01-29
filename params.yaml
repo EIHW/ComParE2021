@@ -36,7 +36,7 @@ lazyml:
   crossvalidation: false
 svm:
   ci_interval: 0.95
-  bootstrap_iterations: 100
+  bootstrap_iterations: 10
 fusion:
   to_fuse:
     - auDeep
@@ -44,3 +44,4 @@ fusion:
     - opensmile
     - openXBoW
     - end2you
+    - DiFE

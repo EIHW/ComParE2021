@@ -131,7 +131,8 @@ dmypy.json
 # vscode
 .vscode/
 /opensmile
-slurm_out/
+/slurm_out
+/slurms
 /openxbow
 /metrics.json
 /audeep_workspace
