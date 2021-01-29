@@ -24,7 +24,7 @@ if __name__=='__main__':
         test_predictions = pd.DataFrame({'filename': filenames, 'prediction': labels}) 
         test_predictions.to_csv(os.path.join(result_folder, 'test.predictions.csv'), index=False)
         if len(set(test_labels['label'].values)) > 1:
-            uar = recall_score(test_labels['label'].values, labels, average='macro')
+            uar = recall_score(test_labels['label'].values.astype(str), labels, average='macro')
             metrics['test'] = {'uar': uar}
     with open(os.path.join(result_folder, 'metrics.json'), 'w') as f:
         json.dump(metrics, f)
