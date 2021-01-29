@@ -1,5 +1,6 @@
 # Baseline scripts for ComParE2021 Covid Speech Sub-Challenge 
 
+<<<<<<< HEAD
 
 The Covid Speech Sub-Challenge (CSS) is a task on classifcation of the presents of COVID-19 in human speech.
 
@@ -33,6 +34,15 @@ Please note that each team needs to submit at least one regular paper to the Com
 Interspeech 2021.
 
 This paper may include your methods and results for several Sub-Challenges.
+=======
+Information on each sub-challenge is given in the respective branch. 
+
+- CCS - Covid Coughing Sub-challenge
+- CSS - Covid Speech Sub-challenge
+- PRS - Primates Sub-challenge
+- ESS - Escalation Sub-challenge 
+
+>>>>>>> main
 
 ## General Installation
 ### Linux
