@@ -28,7 +28,7 @@ if __name__=='__main__':
             filenames, labels = map(list, zip(*(sorted(predictions.items()))))
             filenames.pop(0), labels.pop(0)
             labels = list(map(lambda x: 'negative' if x == 0 else 'positive', labels))
-            uar = recall_score(test_labels['label'].values, labels, average='macro')
+            uar = recall_score(test_labels['label'].values.astype(str), labels, average='macro')
             aggregated_results['end2you']['test'] = {'uar': uar}
     with open('metrics.json', 'w') as f:
         json.dump(aggregated_results, f)
