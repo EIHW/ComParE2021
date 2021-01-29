@@ -16,7 +16,7 @@ import numpy as np
 from tqdm import tqdm
 from glob import glob
 
-FEATURE_PATH='./features'
+FEATURE_BASE='./features'
 
 RANDOM_SEED = 42
 
@@ -169,7 +169,7 @@ if __name__=='__main__':
         params = params['svm']
 
     feature_type = sys.argv[1]
-    feature_base = f'{FEATURE_PATH}/{feature_type}'
+    feature_base = f'{FEATURE_BASE}/{feature_type}'
     result_base = f'./results/{feature_type}'
     for dirpath, dirnames, filenames in os.walk(feature_base):
         if not dirnames:
