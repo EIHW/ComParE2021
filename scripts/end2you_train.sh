@@ -11,7 +11,7 @@ python -m src.end2you --modality="audio" \
                --root_dir=end2you_files/training \
                --batch_size=8 \
                --model_name=emo18 \
-               --num_outputs=2 \
+               --num_outputs=3 \
                train  \
                --loss=ce \
                --metric=uar \
@@ -24,7 +24,7 @@ python -m src.end2you --modality="audio" \
 python -m src.end2you --modality="audio" \
                --root_dir=$save_path/ \
                --model_name=emo18 \
-               --num_outputs=2 \
+               --num_outputs=3 \
                test  \
                --prediction_file=$save_path/training/predictions.csv \
                --metric=uar \

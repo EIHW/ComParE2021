@@ -30,9 +30,8 @@ audio_base='./dist/wav'
 output_base='./features/opensmile'
 label_base='./dist/lab'
 label_files = list(glob.glob(f'{label_base}/*.csv'))
-print(label_files)
 df = pd.read_csv(list(label_files)[0])
-classes = sorted(set(df.label.values))
+classes = sorted(set(df.label.values.astype(str)))
 classtype = '{' + ','.join(classes) + '}'
 
 for feature_set in feature_sets:
