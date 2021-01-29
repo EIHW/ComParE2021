@@ -19,12 +19,12 @@ if __name__=='__main__':
         predictions = json.load(f)
         filenames, labels = map(list, zip(*(sorted(predictions.items()))))
         filenames.pop(0), labels.pop(0)
-        labels = list(map(lambda x: 'negative' if x == 0 else 'positive', labels))
         filenames = list(map(lambda x: x.replace('hdf5', 'wav'), filenames))
         test_predictions = pd.DataFrame({'filename': filenames, 'prediction': labels}) 
         test_predictions.to_csv(os.path.join(result_folder, 'test.predictions.csv'), index=False)
         if len(set(test_labels['label'].values)) > 1:
-            uar = recall_score(test_labels['label'].values.astype(str), labels, average='macro')
+            joined_df = pd.merge(left=test_predictions, right=test_labels, on='filename')
+            uar = recall_score(joined_df['label'].values.astype(int), joined_df['prediction'].values.astype(int), average='macro')
             metrics['test'] = {'uar': uar}
     with open(os.path.join(result_folder, 'metrics.json'), 'w') as f:
         json.dump(metrics, f)
