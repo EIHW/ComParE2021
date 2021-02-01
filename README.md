@@ -1,36 +1,16 @@
 # Baseline scripts for ComParE2021 Escalation Sub-Challenge
 
 
-```diff
-- Info in red to be confirmed
-
-```
-
-The Escalation Sub-Challenge (ESS) is a task on classifcation of level of 
+The Escalation Sub-Challenge (ESS) is a task on classifcation of level of escalation 
 
 
-```diff
-- agression
-
-```
 in vocalisations.
 
 The Sub-Challenge baseline measure is Unweighted Average Recall (UAR).
 
 This Sub-Challenge is based on a corpus collected by Delft University, The Netherlands.
 
-The task is a 
-
-```diff
-- 3-class
-```
-classifciation, and the classes for the data are either 
-
-
-```diff
-- 'L', 'M' or 'H'
-
-```
+The task is a 3-class classifciation, and the classes for the data are either 'Low', 'Medium' or 'High'. 
 
 Apart from the standard ComParE baseline toolkits (openSMILE, Bag-of-Audio-Words), we additionally provide a Deep End-to-End approach (end2you).
 
