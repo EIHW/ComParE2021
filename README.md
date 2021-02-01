@@ -1,10 +1,7 @@
 # Baseline scripts for ComParE2021 Escalation Sub-Challenge
 
 
-The Escalation Sub-Challenge (ESS) is a task on classifcation of level of escalation 
-
-
-in vocalisations.
+The Escalation Sub-Challenge (ESS) is a task on classifcation of level of escalation in vocalisations.
 
 The Sub-Challenge baseline measure is Unweighted Average Recall (UAR).
 
