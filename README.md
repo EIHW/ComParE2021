@@ -16,8 +16,8 @@ The participants are required to provide one prediction for each instance, in th
 
 
 
-```diff
-- filename,prediction
+```
+filename,prediction
 test_00.wav,L
 test_01.wav,L
 [...]
