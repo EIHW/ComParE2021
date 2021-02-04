@@ -1,7 +1,5 @@
 # Baseline scripts for ComParE2021 Covid Speech Sub-Challenge 
 
-<<<<<<< HEAD
-
 The Covid Speech Sub-Challenge (CSS) is a task on classifcation of the presents of COVID-19 in human speech.
 
 The Sub-Challenge baseline measure is Unweighted Average Recall (UAR). 
