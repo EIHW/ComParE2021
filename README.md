@@ -7,7 +7,7 @@ The Sub-Challenge baseline measure is Unweighted Average Recall (UAR).
 
 This Sub-Challenge is based on a corpus collected by Delft University, The Netherlands.
 
-The task is a 3-class classifciation, and the classes for the data are either 'Low', 'Medium' or 'High'. 
+The task is a 3-class classifciation, and the classes for the data are either Low=0, Medium=1 or High=2. 
 
 Apart from the standard ComParE baseline toolkits (openSMILE, Bag-of-Audio-Words), we additionally provide a Deep End-to-End approach (end2you).
 
@@ -18,8 +18,8 @@ The participants are required to provide one prediction for each instance, in th
 
 ```
 filename,prediction
-test_00.wav,L
-test_01.wav,L
+test_00.wav,0
+test_01.wav,1
 [...]
 
 ```
