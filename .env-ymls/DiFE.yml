@@ -1,4 +1,4 @@
-name: /nas/staff/data_work/Maurice/repositories/ComParE2021-public/.envs/DiFE
+name: .envs/DiFE
 channels:
   - defaults
   - pytorch
@@ -267,4 +267,4 @@ dependencies:
     - werkzeug==1.0.1
     - widgetsnbextension==3.5.1
     - wrapt==1.12.1
-prefix: /nas/staff/data_work/Maurice/repositories/ComParE2021-public/.envs/DiFE
+prefix: .envs/DiFE
