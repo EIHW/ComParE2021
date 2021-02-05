@@ -28,7 +28,7 @@ parser.add_argument('-t', '--evaluate_test', dest='evaluate_test', required=Fals
 parser.add_argument('-fe', '--fusion_type', type=str, dest='fusion_type', required=False, action='store',
                     default="rnnatt", help='specify the aggregation type')
 parser.add_argument('-ct', '--combine_type', type=str, dest='combine_type', required=False, action='store',
-                    default="mean", help='specify the aggregation type')
+                    default="sum", help='specify the aggregation type')
 parser.add_argument('-ft', '--fine_tuning', dest='fine_tuning', required=False, action='store_true',
                     default=False, help='specify if a trained model gets fine-tuned')
 parser.add_argument('--model_type', type=str, dest='model_type', required=False, action='store',
@@ -74,7 +74,7 @@ def main(Param):
         config = set_config()
         X_train, y_train = load_feature_vectors(train_df,config)
         X_devel, y_devel = load_feature_vectors(val_df,config)
-        X_test, _ = load_feature_vectors(test_df,config)
+        X_test, _ = load_feature_vectors(test_df,config,test_set=True)
         y_train_df = train_df['label']
 
         model = models.create_bert_rnn_att(config)

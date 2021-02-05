@@ -15,7 +15,7 @@ layer_ids = [-4, -3, -2, -1]
 embedding_size = 768
 
 
-def load_feature_vectors(df, config):
+def load_feature_vectors(df, config, test_set=False):
     features = []
     labels = []
 
@@ -30,8 +30,9 @@ def load_feature_vectors(df, config):
 
     features = pad_sequences(features, maxlen=config.max_seq_length, padding="post")
     features = np.array(features).astype('float32')
-    labels = np.array(labels).astype('float32')
-    labels = to_categorical(labels)
+    if not test_set:
+        labels = np.array(labels).astype('float32')
+        labels = to_categorical(labels)
     print(' - X shape:', features.shape)
     print(' - y shape', labels.shape)
     return features, labels
