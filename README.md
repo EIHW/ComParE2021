@@ -35,7 +35,7 @@ Then, with one of the environments activated, run `dvc add dist`. The data will 
 `src` contains the python scripts used to run the baseline pipeline. It includes scripts for feature extraction and running the linear SVM classification.
 
 ## Scripts
-We provide bash scripts for extracting auDeep features and running `end2you` on the data in `scripts/`.
+We provide bash scripts for extracting auDeep features and running `end2you` on the data in `scripts/`. You can run them on their own, or automatically as part of the experimental pipeline.
 
 ## Reproducing the baseline
 You can either reproduce the whole baseline from scratch or run only the SVM classifications on the provided features sets.
