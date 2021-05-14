@@ -1,14 +1,41 @@
-# Baseline scripts for ComParE2021
-
-Information on each sub-challenge is given in the respective branch. 
-
-- CCS - Covid Coughing Sub-challenge
-- CSS - Covid Speech Sub-challenge
-- PRS - Primates Sub-challenge
-- ESS - Escalation Sub-challenge 
+# Baseline scripts for ComParE2021 Primates Sub-Challenge 
 
 
-## General Installation
+The Primates Sub-Challenge (PRS) is a task on classifcation Primate vocalisations.
+
+The Sub-Challenge baseline measure is Unweighted Average Recall (UAR). 
+
+This Sub-Challenge is based on a corpus collected by Utrecht University, The Netherlands.
+
+The task is a 5-class classifciation, and the classes for the audio data are either 'background', 'chimpanze', 'mandrille', 'geunon', or 'redcap'. Apart from the standard ComParE baseline toolkits (openSMILE, Bag-of-Audio-Words), we additionally provide a Deep End-to-End approach (end2you).
+
+## Submission 
+The participants are required to provide one prediction for audio instance, in the test set. 
+You should submit a prediction file, in the following format:
+
+```
+filename,prediction
+test_00.wav,chimpanze
+test_01.wav,geunon
+[...]
+```
+
+PLEASE NOTE THAT THE SUBMISSION FORMAT HAS CHANGED, COMPARED TO THE 2009-2018 CHALLENGES OF THE COMPARE SERIES.
+
+Each registered team has up to five (5) submissions for this Sub-Challenge.
+
+To submit your csv files, login on the website: http://www5.cs.fau.de/compare/
+with the credentials you received from the organisers.
+
+More information on the challenge: >http://www.compare.openaudio.eu/compare2021/
+
+Please note that each team needs to submit at least one regular paper to the ComParE 2021 Special Session at
+Interspeech 2021.
+
+This paper may include your methods and results for several Sub-Challenges.
+ts for ComParE2021
+
+### General Installation
 ### Linux
 If you have conda installed (either miniconda or anaconda), you can execute `./install` to setup the two virtual environments needed for executing the experiments. You can activate the `core` or `end2you` environments with `source ./activate core` or `source ./activate end2you` respectively. 
 

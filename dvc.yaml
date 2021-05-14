@@ -1,7 +1,137 @@
 stages:
+  extract_deepspectrum:
+    cmd: source ./activate core; python -m src.ds_feature_extractor
+    deps:
+    - dist/lab
+    - dist/wav
+    - src/ds_feature_extractor.py
+    params:
+    - deepspectrum
+    outs:
+    - features/deepspectrum
+  extract_opensmile:
+    cmd: source ./activate core; python -m src.opensmile_extractor
+    deps:
+    - dist/lab
+    - dist/wav
+    - opensmile/
+    - src/opensmile_extractor.py
+    params:
+    - opensmile
+    outs:
+    - features/opensmile
+  aggregate_results:
+    cmd: source ./activate core; python -m src.aggregate_results
+    deps:
+    - results/
+    - end2you_files
+    - src/aggregate_results.py
+    metrics:
+    - metrics.json
   download_openXBOW:
     cmd: mkdir -p openxbow; wget -O openxbow/openXBOW.jar https://raw.githubusercontent.com/openXBOW/openXBOW/master/openXBOW.jar
     deps:
     - https://raw.githubusercontent.com/openXBOW/openXBOW/master/openXBOW.jar
     outs:
     - openxbow
+  openXBoW:
+    cmd: source ./activate core; python -m src.open_xbow
+    deps:
+    - features/opensmile
+    - openxbow/
+    - src/open_xbow.py
+    params:
+    - XBOW
+    outs:
+    - features/openXBoW
+  svm_opensmile:
+    cmd: source ./activate core; python -m src.svm opensmile
+    deps:
+    - features/opensmile
+    - src/svm.py
+    params:
+    - svm
+    outs:
+    - results/opensmile
+  svm_openxbow:
+    cmd: source ./activate core; python -m src.svm openXBoW
+    deps:
+    - features/openXBoW
+    - src/svm.py
+    params:
+    - svm
+    outs:
+    - results/openXBoW
+  svm_deepspectrum:
+    cmd: source ./activate core; python -m src.svm deepspectrum
+    deps:
+    - features/deepspectrum
+    - src/svm.py
+    params:
+    - svm
+    outs:
+    - results/deepspectrum
+  svm_audeep:
+    cmd: source ./activate core; python -m src.svm auDeep
+    deps:
+    - features/auDeep
+    - src/svm.py
+    params:
+    - svm
+    outs:
+    - results/auDeep
+  auDeep:
+    cmd: ./scripts/auDeep.sh
+    deps:
+    - dist/
+    - scripts/auDeep.sh
+    outs:
+    - audeep_workspace
+    - features/auDeep
+  late_fusion:
+    cmd: source ./activate core; python -m src.late_fusion
+    deps:
+    - results/auDeep
+    - results/deepspectrum
+    - results/openXBoW
+    - results/opensmile
+    - results/end2you
+    - src/late_fusion.py
+    params:
+    - fusion
+    outs:
+    - results/fusion
+  convert_features:
+    cmd: source ./activate core; python -m src.convert_features_to_csv
+    deps:
+    - features/openXBoW
+    - features/opensmile
+    - src/convert_features_to_csv.py
+    outs:
+    - features/openXBoW_csv
+    - features/opensmile_csv
+  end2you_preprocess:
+    cmd: ./scripts/end2you_preprocess.sh
+    deps:
+    - dist/
+    - scripts/end2you_preprocess.sh
+    - src/convert_to_e2u.py
+    - src/end2you.py
+    outs:
+    - end2you_files/data
+  end2you_train:
+    cmd: ./scripts/end2you_train.sh
+    deps:
+    - end2you_files/data
+    - scripts/end2you_train.sh
+    - src/end2you.py
+    outs:
+    - end2you_files/training
+    - end2you_files/predictions.json
+  export_e2u_results:
+    cmd: source ./activate core; python -m src.export_end2you_results
+    deps:
+    - end2you_files/
+    - src/export_end2you_results.py
+    outs:
+    - results/end2you
