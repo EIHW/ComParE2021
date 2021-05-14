@@ -46,8 +46,8 @@ window_overlap="0.04"
 # Mel-scale spectrograms with 128 frequency bands are extracted
 mel_bands="128"
 
-# The ComParE 2020 USOMS-e (E) audio files differ in length. By setting the --fixed-length option, we make sure that all
-# audio files are exactly 5 second long. This is achieved by cutting or zero-padding audio files as required.
+# The ComParE 2021 PRS audio files differ in length. By setting the --fixed-length option, we make sure that all
+# audio files are exactly 8 second long. This is achieved by cutting or zero-padding audio files as required.
 fixed_length="8"
 
 # We filter low amplitudes in the spectrograms, which eliminates some background noise. Our system normalises
